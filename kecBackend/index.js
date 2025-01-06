@@ -12,7 +12,7 @@ const PORT = 9001;
 app.use(express.json());
 
 // Connect to MongoDB
-mdb.connect("mongodb://localhost:27017/mydb").then(() => {
+mdb.connect("mongodb+srv://samyu:1234@users.g855e.mongodb.net/mydb").then(() => {
     console.log("Mongodb Connection Successful");
 }).catch((err) => {
     console.error("Check your connection string", err);
@@ -59,6 +59,17 @@ app.post('/login', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Internal server error", isLoggedIn: false });
+    }
+});
+app.post('/form', async (req, res) => {
+    try {
+        const data = new Form(req.body);
+        await data.save();
+        console.log("Query added successfully");
+        res.status(200).json({ message: "Form submitted successfully" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Error submitting form" });
     }
 });
 

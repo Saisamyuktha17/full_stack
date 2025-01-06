@@ -1,100 +1,59 @@
-/* Global reset for margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ffe3f3, #ffccf2); /* Vibrant pink radiant background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styles for the form container */
+/* Horizontal form styling */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    width: 1000%;
-    max-width: 400px; /* Responsive width */
-    padding: 68px;
+    justify-content: space-between;
+    gap: 15px; /* Add spacing between form elements */
+    width: 100%;
+    max-width: 800px; /* Limit form width for better layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.6s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Input fields styling */
 form input {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 12px 0;
-    border: 1px solid #bbb;
-    border-radius: 8px;
+    flex: 1; /* Make inputs flexible to fit available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    background-color: #f9fafb;
-    color: #333;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form input:focus {
-    border-color: #e91e63; /* Complementary to pink background */
-    box-shadow: 0 0 8px rgba(233, 30, 99, 0.6);
-    outline: none;
-}
-
-/* Submit button styling */
+/* Button styling */
 form button {
-    width: 100%;
-    padding: 14px;
+    padding: 10px 20px;
     font-size: 16px;
-    font-weight: bold;
     color: white;
-    background-color: #e91e63; /* Matching vibrant pink */
+    background-color:blue;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    transition: background-color 0.3s;
 }
 
+/* Button hover effect */
 form button:hover {
-    background-color: #c2185b;
-    transform: translateY(-2px);
+    background-color: #45a049;
 }
 
-form button:active {
-    background-color: #a31545;
-    transform: scale(0.98);
+/* Footer container styling */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
 }
 
-/* Smooth fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Additional styling for labels */
-form label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-    align-self: flex-start;
-}
-
-/* Accessibility improvements */
-form input:disabled,
-form button:disabled {
-    background-color: #e0e0e0;
-    color: #888;
-    cursor: not-allowed;
-    border-color: #ccc;
+footer div {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-import "../../assets/css/Home.css"
+import '../../assets/css/Home.css';
 var Home = () => {
   var styling = {
     fontSize: "30px",
@@ -7,9 +7,8 @@ var Home = () => {
   };
   return (
     <div>
-      <h1 style={styling} id="idSEg"></h1>
-
-    
+      <h1 style={styling} id="idSEg">Welcome to my home page</h1>
+      <p className = "box-model">Hello</p>
     </div>
   );
 };

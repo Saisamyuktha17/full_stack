@@ -1,11 +1,12 @@
-import '../../assets/css/NavBar.css'
+
+import '../../assets/css/NavBar.css';
 import { Link } from 'react-router-dom';
 var NavBar = () =>{
     return(
         <header>
             <nav>
                 <ul>
-                    <li><Link to='/home' className='link'>Home</Link></li>
+                    <li><Link to='/' className='link'>Home</Link></li>
                     <li><Link to="/about" className='link' target='_blank'>About</Link></li>
                     <li><Link to="/gallery" className='link'>Gallery</Link></li>
                     <li><Link to="/contact" className='link'>Contact</Link></li>
@@ -13,10 +14,6 @@ var NavBar = () =>{
                     <li><Link to="/useref" className='link'>UseRef</Link></li>
                     <li><Link to="/usecontext" className='link'>UseContext</Link></li>
                     <li><Link to="/usememo" className='link'>UseMemo</Link></li>
-                    
-                    <li><Link to="/usememo" className='link'>login</Link></li>
-                    
-                    <li><Link to="/usememo" className='link'>Sign up</Link></li>
                 </ul>
             </nav>
         </header>
