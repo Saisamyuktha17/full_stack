@@ -1,12 +1,10 @@
-
 const bcrypt = require('bcrypt');
 var express = require('express');
 var path = require('path');
 const cors = require('cors');
 var mdb = require('mongoose');
-//var Users = require('./model/form');
-var Form = require('./model/form')
-
+var Users = require('./models/users');
+var Form = require('./models/form');
 
 var app = express();
 app.use(cors());
@@ -21,7 +19,7 @@ mdb.connect("mongodb://localhost:27017/mydb").then(() => {
 });
 
 // Routes
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.json('Optimus Prime : Attention Autobots, Transform and Roll Out');
 });
 
@@ -65,7 +63,7 @@ app.post('/login', async (req, res) => {
 });
 
 
-app.get('/getsignup', async (req, res) => {
+app.get('/signup', async (req, res) => {
     try {
         const allSignUpRecords = await Users.find();
         res.json(allSignUpRecords);
@@ -73,9 +71,9 @@ app.get('/getsignup', async (req, res) => {
     } catch (err) {
         console.error(err);
     }
-});*/
+});
 
-app.post('/form', async (req, res) => {
+app.post('/users', async (req, res) => {
     try {
         const data = new Form(req.body);
         await data.save();
