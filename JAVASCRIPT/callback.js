@@ -7,4 +7,4 @@ function submitForm(formMsg,dbs){
         dbs()
         console.log(formMsg)
     },1000)
-}np
+}   

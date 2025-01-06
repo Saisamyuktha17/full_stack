@@ -1,0 +1,100 @@
+/* Global reset for margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffe3f3, #ffccf2); /* Vibrant pink radiant background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the form container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000%;
+    max-width: 400px; /* Responsive width */
+    padding: 68px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Input fields styling */
+form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9fafb;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #e91e63; /* Complementary to pink background */
+    box-shadow: 0 0 8px rgba(233, 30, 99, 0.6);
+    outline: none;
+}
+
+/* Submit button styling */
+form button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #e91e63; /* Matching vibrant pink */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #a31545;
+    transform: scale(0.98);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional styling for labels */
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    align-self: flex-start;
+}
+
+/* Accessibility improvements */
+form input:disabled,
+form button:disabled {
+    background-color: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+    border-color: #ccc;
+}
